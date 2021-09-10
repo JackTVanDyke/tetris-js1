@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+:root {
+  --border: 3px solid black;
+  --border-game: solid silver;
+  --font-fam: "Roboto Mono";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: #000000;
+  font-family: var(--font-fam);
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+header {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-fam);
+  margin: 0;
+  padding: 0;
+  border: var(--border);
+  cursor: default;
+}
+
+header h1 {
+  font-size: 6rem;
+  padding: 10px;
+  margin: 0px;
+}
+
+header h2 {
+  font-size: 2rem;
+  font-style: italic;
+  padding: 10px;
+  margin: 0px;
+}
+
+header h3 {
+  font-size: 2rem;
+  padding: 10px;
+  margin: 0px;
+}
+
+#score {
+  text-decoration: underline;
+}
+
+#start {
+  padding: 10px;
+  margin: 0px 0px 10px 0px;
+  font-family: inherit;
+  font-size: 2rem;
+  border: var(--border);
+  background: none;
+}
+
+#start:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.game-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.game-container div {
+  width: 10%;
+  height: 5%;
+  border: var(--border-game);
+}
+
+.blocks {
+  background-color: black;
+}
+
+.lBlock {
+  background-color: pink;
+}
+.zBlock {
+  background-color: green;
+}
+.tBlock {
+  background-color: blue;
+}
+.oBlock {
+  background-color: orange;
+}
+.iBlock {
+  background-color: yellow;
+}
