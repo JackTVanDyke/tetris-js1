@@ -15,11 +15,11 @@ body {
   font-family: var(--font-fam);
   height: 100vh;
   margin: 0;
-  overflow: hidden;
+  padding: 0;
 }
 
 header {
-  width: 50%;
+  width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,18 +70,17 @@ header h3 {
 }
 
 .game-container {
-  width: 50%;
-  height: 100%;
+  width: 600px;
+  height: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
-.game-container div {
-  width: 10%;
-  height: 5%;
+.game-container-space {
+  width: 60px;
+  height: 60px;
   border: var(--border-game);
 }
 
@@ -103,4 +102,8 @@ header h3 {
 }
 .iBlock {
   background-color: yellow;
+}
+
+.taken {
+  background-color: red;
 }

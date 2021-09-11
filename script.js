@@ -65,3 +65,31 @@ function undraw() {
     squares[currentPosition + index].classList.remove("blocks");
   });
 }
+
+//make blocks move
+const timerId = setInterval(moveDown, 1000);
+
+//move down function
+function moveDown() {
+  undraw();
+  currentPosition += width - 1;
+  draw();
+  freeze();
+}
+
+function freeze() {
+  if (
+    current.some((index) =>
+      squares[currentPosition + index + width].classList.contains("taken")
+    )
+  ) {
+    current.forEach((index) =>
+      squares[currentPosition + index].classList.add("taken")
+    );
+    //start new block
+    random = Math.floor(Math.random() * theBlocks.length);
+    current = theBlocks[random][currentRotation];
+    currentPosition = 4;
+    draw();
+  }
+}
