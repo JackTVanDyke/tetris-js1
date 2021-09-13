@@ -19,7 +19,7 @@ body {
 }
 
 header {
-  width: 600px;
+  width: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,41 +69,59 @@ header h3 {
   cursor: pointer;
 }
 
+#start:active {
+  transform: scale(0.8);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-col h3 {
+  font-size: 2rem;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+
 .game-container {
   width: 600px;
   height: 1200px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  background-color: rgb(220, 220, 220);
+  border-left: var(--border);
+  border-right: var(--border);
+  border-bottom: var(--border);
 }
 
-.game-container-space {
+.game-container div {
   width: 60px;
   height: 60px;
-  border: var(--border-game);
+}
+
+.next-up {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-right: var(--border);
+  border-bottom: var(--border);
+}
+
+.next-up div {
+  height: 75px;
+  width: 75px;
 }
 
 .blocks {
   background-color: black;
-}
-
-.lBlock {
-  background-color: pink;
-}
-.zBlock {
-  background-color: green;
-}
-.tBlock {
-  background-color: blue;
-}
-.oBlock {
-  background-color: orange;
-}
-.iBlock {
-  background-color: yellow;
-}
-
-.taken {
-  background-color: red;
 }
