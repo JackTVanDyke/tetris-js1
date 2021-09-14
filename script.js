@@ -110,6 +110,7 @@ function freeze() {
     draw();
     displayShape();
     addScore();
+    gameOver();
   }
 }
 
@@ -255,5 +256,17 @@ function addScore() {
       squares = squaresRemoved.concat(squares);
       squares.forEach((cell) => grid.appendChild(cell));
     }
+  }
+}
+
+//game over
+function gameOver() {
+  if (
+    current.some((index) =>
+      squares[currentPosition + index].classList.contains("taken")
+    )
+  ) {
+    scoreDisplay.innerHTML = `End - ${score}`;
+    clearInterval(timerId);
   }
 }
